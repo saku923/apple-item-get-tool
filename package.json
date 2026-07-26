@@ -1,6 +1,8 @@
 {
   "name": "apple-item-get-tool",
   "version": "1.0.0",
+  "module": "esnext",
+  "moduleResolution": "bundler",
   "description": "",
   "main": "index.js",
   "scripts": {
