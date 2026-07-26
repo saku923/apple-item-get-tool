@@ -21,18 +21,16 @@ async function main() {
 
     const data = JSON.parse(jsonText);
 
-    console.log(data.tiles);
-
     const items = data.tiles;
     items.forEach((item: any) => {
-      // console.log(item);
-      // console.log(item.title);
-      console.log(item.filters.dimensions.refurbClearModel);
+      console.log(item.filters.dimensions);
       if (
         item.filters.dimensions.dimensionCapacity === TARGET.capacity &&
         item.filters.dimensions.refurbClearModel === TARGET.model
       ) {
-        console.log("見つかった！");
+        console.log("該当の商品が見つかりました！");
+        console.log(item.filters.dimensions.dimensionCapacity);
+        console.log(item.filters.dimensions.refurbClearModel);
       }
     });
   } catch (error) {
