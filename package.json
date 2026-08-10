@@ -1,0 +1,19 @@
+{
+  "name": "apple-item-get-tool",
+  "version": "1.0.0",
+  "module": "esnext",
+  "moduleResolution": "bundler",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  }
+}
