@@ -36,15 +36,11 @@ export const extractBootstrap = (html: string) => {
 };
 
 export const findTargetItems = (items: Tile[]) => {
-  items.forEach((item) => {
-    console.log(item.filters.dimensions);
-    if (
-      item.filters.dimensions.dimensionCapacity === TARGET.capacity &&
-      item.filters.dimensions.refurbClearModel === TARGET.model
-    ) {
-      console.log("該当の商品が見つかりました！");
-      console.log(item.filters.dimensions.dimensionCapacity);
-      console.log(item.filters.dimensions.refurbClearModel);
-    }
+  return items.filter((item) => {
+    const { dimensionCapacity, refurbClearModel } = item.filters.dimensions;
+
+    return (
+      dimensionCapacity === TARGET.capacity && refurbClearModel === TARGET.model
+    );
   });
 };
