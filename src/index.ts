@@ -1,4 +1,5 @@
 import { fetchHtml, extractBootstrap, findTargetItems } from "./apple";
+import { notifySlack } from "./slack";
 
 async function main() {
   try {
@@ -19,6 +20,8 @@ async function main() {
         console.log(refurbClearModel);
         console.log(dimensionColor);
       });
+
+      await notifySlack(items);
     }
   } catch (error) {
     console.error(error);

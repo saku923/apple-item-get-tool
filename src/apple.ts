@@ -1,9 +1,9 @@
 const TARGET = {
   capacity: "256gb",
-  model: "iphone15",
+  model: "iphone15plus",
 };
 
-type Tile = {
+export type Tile = {
   filters: {
     dimensions: {
       dimensionCapacity: string;
