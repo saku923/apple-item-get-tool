@@ -1,6 +1,6 @@
 const TARGET = {
   capacity: "256gb",
-  model: "iphone15",
+  model: "iphone15plus",
 };
 
 export type Tile = {
