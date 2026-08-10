@@ -3,7 +3,7 @@ const TARGET = {
   model: "iphone15",
 };
 
-type Tile = {
+export type Tile = {
   filters: {
     dimensions: {
       dimensionCapacity: string;
