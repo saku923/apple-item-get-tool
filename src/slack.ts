@@ -12,7 +12,16 @@ export const notifySlack = async (items: Tile[]) => {
       const { dimensionCapacity, refurbClearModel, dimensionColor } =
         item.filters.dimensions;
 
-      return `${dimensionCapacity} / ${refurbClearModel} / ${dimensionColor}`;
+      const itemMessage = `
+            -------------------------------
+            タイトル: ${item.title}
+            容量: ${dimensionCapacity}
+            モデル: ${refurbClearModel}
+            色: ${dimensionColor}
+            URL: https://www.apple.com/${item.productDetailsUrl}
+        `;
+
+      return itemMessage;
     })
     .join("\n");
 
@@ -22,7 +31,7 @@ export const notifySlack = async (items: Tile[]) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      text: `🎉 該当の商品が見つかりました！\n${message}`,
+      text: `🎉 該当の商品が見つかりました！\n${message}\n-------------------------------`,
     }),
   });
 };

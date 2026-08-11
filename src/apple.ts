@@ -4,6 +4,8 @@ const TARGET = {
 };
 
 export type Tile = {
+  title: string;
+  productDetailsUrl: string;
   filters: {
     dimensions: {
       dimensionCapacity: string;
