@@ -16,9 +16,12 @@ async function main() {
         const { dimensionCapacity, refurbClearModel, dimensionColor } =
           item.filters.dimensions;
 
-        console.log(dimensionCapacity);
-        console.log(refurbClearModel);
-        console.log(dimensionColor);
+        console.log("-------------------------------");
+        console.log("タイトル:", item.title);
+        console.log("容量:", dimensionCapacity);
+        console.log("モデル:", refurbClearModel);
+        console.log("色:", dimensionColor);
+        console.log("URL:", `https://www.apple.com/${item.productDetailsUrl}`);
       });
 
       await notifySlack(items);
